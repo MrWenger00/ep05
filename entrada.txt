@@ -1,0 +1,18 @@
+Lisboa;Madri;Paris
+Madri;Lisboa;Roma
+Paris;Lisboa;Londres;Bruxelas
+Londres;Paris;Dublin;Berlim
+Berlim;Praga;Varsóvia;Kiev
+Praga;Berlim
+Varsóvia;Berlim;Moscou
+Kiev;Moscou
+Moscou;Varsóvia;Kiev
+Roma;Madri
+Bruxelas;Paris
+Londrina;São Paulo;Curitiba
+São Paulo;Londrina;Brasília;Rio de Janeiro
+Curitiba;Londrina;Porto Alegre
+Maringá;Foz do Iguaçu;Campo Grande
+Foz do Iguaçu;Florianópolis
+Porto Alegre;Curitiba;Buenos Aires
+Rio de Janeiro;São Paulo;Recife;Lisboa
