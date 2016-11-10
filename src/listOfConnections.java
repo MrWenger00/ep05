@@ -1,4 +1,5 @@
-/**@author Fl·vio Prado
+/**@author Fl√°vio Prado
+ * @author Felipe Silva
  * @author Guilherme Maeda
  * @author Guilherme Wenger
  * 
