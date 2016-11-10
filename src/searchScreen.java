@@ -1,4 +1,5 @@
-/**@author Flávio Prado
+/**@author FlÃ¡vio Prado
+ * @author Felipe Silva
  * @author Guilherme Maeda
  * @author Guilherme Wenger
  * 
@@ -32,7 +33,7 @@ public class searchScreen {
 	public static JTable jtTable;
 	public static DefaultTableModel dtmTable;
 	public static JScrollPane scroll;
-	public static String[] column = new String[]{"Conexões"};
+	public static String[] column = new String[]{"ConexÃµes"};
 	public static cityOfOrigin newList = new cityOfOrigin();
 	
 	
@@ -44,7 +45,7 @@ public class searchScreen {
 	}
 	
 	public static void createScreen(){
-		menu = new JFrame("Pesquisar conexões");
+		menu = new JFrame("Pesquisar conexÃµes");
 		menu.setSize(400, 300);
 		menu.setLocationRelativeTo(null);
 		menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
@@ -118,19 +119,19 @@ public class searchScreen {
 		actions();
 	
 	}
-	//ações da tela
+	//aÃ§Ãµes da tela
 	public static void actions(){
 		originCity.addKeyListener(new KeyListener() {
 			
 			@Override
 			public void keyTyped(KeyEvent e) {
-				/*método sem implementação necessária*/
+				/*mÃ©todo sem implementaÃ§Ã£o necessÃ¡ria*/
 				
 			}
 			
 			@Override
 			public void keyReleased(KeyEvent e) {
-				/*método sem implementação necessária*/
+				/*mÃ©todo sem implementaÃ§Ã£o necessÃ¡ria*/
 				
 			}
 			
@@ -149,7 +150,7 @@ public class searchScreen {
 				String origin = originCity.getText().trim();
 				if(validateString(origin)){
 					JOptionPane.showMessageDialog(null,
-							origin+" não é um nome válido! Verifique o Texto digitado e tente novamente.");
+							origin+" nÃ£o Ã© um nome vÃ¡lido! Verifique o Texto digitado e tente novamente.");
 					originCity.grabFocus();
 				}else{
 					String[] connections = organizeList.search(newList, origin).split(",");				
@@ -162,7 +163,7 @@ public class searchScreen {
 						}
 					}else{
 						JOptionPane.showMessageDialog(null,
-								origin+" não possui conexões.");
+								origin+" nÃ£o possui conexÃµes.");
 						originCity.grabFocus();
 						
 					}
@@ -170,17 +171,17 @@ public class searchScreen {
 			}
 		});
 	}
-	//esse método limpa a JTable
+	//esse mÃ©todo limpa a JTable
 	public static void clearTable(JTable table){
 		while (table.getModel().getRowCount() > 0) {//executa equanto a Jtable possuir linhas
 			((DefaultTableModel) table.getModel()).removeRow(0);//remove a linha
 		}
 	}
-	//esse método verifica se foram digitados valores incorretos como numeros ou pontuação
+	//esse mÃ©todo verifica se foram digitados valores incorretos como numeros ou pontuaÃ§Ã£o
 	public static boolean validateString(String text){
 		boolean result = false;
 		text = text.replace(" ", "");
-		text = Normalizer.normalize(text, Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");//remover acentuação
+		text = Normalizer.normalize(text, Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");//remover acentuaÃ§Ã£o
 		String[] aux = text.split("");
 		for (int i = 0; i < text.length(); i++) {
 			if(!aux[i].matches("[a-zA-Z]")){
